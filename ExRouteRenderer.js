@@ -19,9 +19,10 @@ import Layout from './Layout';
 
 import { BackIcon } from './ExNavigatorIcons';
 
-import { Navigator } from 'react-native';
-import  * as ExNavigator from './ExNavigator';
-import  * as ExRoute from './ExRoute';
+// import { Navigator } from 'react-native';
+import { Navigator } from 'react-native-deprecated-custom-components'
+import * as ExNavigator from './ExNavigator';
+import * as ExRoute from './ExRoute';
 
 type BarStyles = {
   titleStyle?: any;
@@ -93,7 +94,7 @@ class NavigationBarRouteMapper {
     }
 
     let title;
-    if (route.getBackButtonTitle){
+    if (route.getBackButtonTitle) {
       title = route.getBackButtonTitle(this._navigator, index, state);
     } else if (previousRoute.getTitle) {
       title = previousRoute.getTitle(this._navigator, previousIndex, state);

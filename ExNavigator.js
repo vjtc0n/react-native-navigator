@@ -1,15 +1,14 @@
 'use strict';
 
 import React, {
-  PropTypes,
 } from 'react';
+import PropTypes from 'prop-types';
 import {
   Image,
-  Navigator,
   Text,
   View,
 } from 'react-native';
-
+import { Navigator } from 'react-native-deprecated-custom-components'
 import invariant from 'invariant';
 import cloneReferencedElement from 'react-clone-referenced-element';
 
@@ -30,7 +29,7 @@ export default class ExNavigator extends React.Component {
   static propTypes = {
     ...Navigator.props,
     showNavigationBar: PropTypes.bool,
-    navigationBarStyle: View.propTypes.style,
+    navigationBarStyle: View.propTypes ? View.propTypes.style : null,
     titleStyle: Text.propTypes.style,
     barButtonTextStyle: Text.propTypes.style,
     barButtonIconStyle: Image.propTypes.style,
