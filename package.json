@@ -21,8 +21,9 @@
   },
   "homepage": "https://github.com/exponentjs/ex-navigator#readme",
   "dependencies": {
-    "@exponent/react-native-responsive-image": "^1.0.0",
+    "@exponent/react-native-responsive-image": "https://github.com/expo/react-native-responsive-image.git",
     "invariant": "^2.2.0",
-    "react-clone-referenced-element": "^1.0.1"
+    "react-clone-referenced-element": "^1.0.1",
+    "react-native-deprecated-custom-components": "^0.1.2"
   }
 }
